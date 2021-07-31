@@ -86,7 +86,7 @@ class AuthTest {
         $("[data-test-id=login] input").setValue(registeredUser.getLogin());
         $("[data-test-id=password] input").setValue(wrongPassword);
         $("[class=button__text]").click();
-        $("[data-test-id=error-notification").shouldHave(exactText("Ошибка" + "" + "Ошибка! Неверно указан логин или пароль"));
+        $("[data-test-id=error-notification").shouldHave(exactText("Ошибка" + "\n" + "Ошибка! Неверно указан логин или пароль"));
 
     }
 }
